@@ -30,3 +30,8 @@ em++ -o www/index.html client.cpp  \
 # Compile and run the C++ server application.
 g++ -o server server.cpp -I./include ; ./server
 ```
+
+# How it works
+[![IMAGE](https://miro.medium.com/v2/resize:fit:720/format:webp/1*CRS3yK4yGTN6E5c2x1NyDQ.png)](https://medium.com/@EDBCBlog/your-first-multiplayer-games-a-guide-for-absolute-beginners-with-raylib-nodepp-and-wasm-532133942b43)
+
+[Click Here](https://medium.com/@EDBCBlog/your-first-multiplayer-games-a-guide-for-absolute-beginners-with-raylib-nodepp-and-wasm-532133942b43)
