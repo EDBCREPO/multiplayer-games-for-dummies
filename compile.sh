@@ -1,17 +1,13 @@
-if [ ! -d "www" ]; then
-    mkdir "www"
+mkdir -p build
+
+if [ ! -d "./build/_deps" ]; then
+   ( cd build ; cmake .. )
 fi
 
-em++ -o www/index.html main.cpp    \
-     -lraylib -lwebsocket.js       \
-     -I./include -L./lib           \
-     -s USE_GLFW=3                 \
-     -s ASYNCIFY=1                 \
-     -s FETCH=1                    \
-     -s WASM=1                     \
-     -s ERROR_ON_UNDEFINED_SYMBOLS=0
+( cd build ; make )
 
-#emrun ./www/index.html
-#g++ -o server server.cpp -I./include ; 
+if [ ! $? -eq 0 ]; then
+    echo "exit error"; exit;
+fi
 
-./server
+./build/main
